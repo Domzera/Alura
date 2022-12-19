@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<meta charset="UTF-8">
+<script>
+document.write("<h3>FOI</h3>");
+
+function pulaLinha(){
+	document.write("<br><br>");
+}
+
+function mostra(texto){
+	document.write(texto);
+	pulaLinha();
+}
+
+function sorteia(numero){
+	return Math.round(Math.random()*numero);
+}
+
+var numero = parseInt(prompt("Qual o valor maximo?"));
+
+var chute = parseInt(prompt("Escolha um numero até " + numero));
+
+var x = sorteia(numero);
+
+if(chute==x){
+	mostra("Acertou, eu pensei no "+ x +" e você escolheu o " + chute);
+}else{
+	mostra("Não acertou, eu pensei no "+ x +" e você escolheu o " + chute);
+}
+
+mostra(numero);
+
+if(chute>x){
+	mostra("O seu era maior!");
+}else{
+	mostra("O meu era maior!");
+}
+
+</script>
+
+<h1> Alura 01 </h1>
+
+</body>
+</html>
